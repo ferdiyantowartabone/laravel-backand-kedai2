@@ -86,4 +86,10 @@ public function store(Request $request)
      $user->delete();
      return redirect()->route('user.index')->with('success', 'User deleted successfully');
  }
+
+//  public function __construct()
+// {
+//     $this->middleware(['role:admin']);
+// }
+
 }

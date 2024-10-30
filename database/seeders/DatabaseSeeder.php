@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Product;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -20,6 +21,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin Kedai',
             'email' => 'kedai@gmail.com',
             'password' => Hash::make('12345678'),
-    ]);
+        ]);
+
+        $this->call(ProductSeeder::class);
     }
 }
