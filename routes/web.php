@@ -23,10 +23,10 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('user', UserController::class);
     Route::resource('product', ProductController::class);
     Route::resource('profil', ProfilController::class);
-    
-    Route::group(['middleware' => ['permission:edit articles']], function () {
-        Route::get('/articles/edit', 'ArticleController@edit')->name('articles.edit');
-    });
+
+    // Route::group(['middleware' => ['permission:edit articles']], function () {
+    //     Route::get('/articles/edit', 'ArticleController@edit')->name('articles.edit');
+    // });
 
 
 });
